@@ -4,7 +4,7 @@
 # Compiles and install qt.
 
 # download files
-download=1
+download=0
 
 # Clean directories that are going to be used.
 clean=0
@@ -13,8 +13,9 @@ clean=0
 nbthreads=4
 
 # Installation directory for Qt
-install_dir=/usr/local/Trolltech/Qt-4.8.7/
-qt_install_dir_options="-prefix ../$install_dir/"
+install_dir=~/qt/4.8.7/
+make -p $install_dir
+qt_install_dir_options="-prefix $install_dir"
 
 # OSX architectures
 osx_architecture=x86_64
@@ -127,12 +128,6 @@ cd ..
 echo "Build Qt"
 
 cwd=$(pwd)
-
-if [[ -n $install_dir ]]
-then  
-  mkdir qt-everywhere-opensource-build-4.8.7
-  qt_install_dir_options="-prefix ../qt-everywhere-opensource-build-4.8.7/"
-fi
 
 tar -xzvf qt-everywhere-opensource-src-4.8.7.tar.gz
 cd qt-everywhere-opensource-src-4.8.7
