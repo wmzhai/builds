@@ -126,3 +126,11 @@ cd qt-everywhere-opensource-src-4.8.7
   -L $cwd/openssl-1.0.1h
 make -j $nbthreads
 make install
+
+# 由于ubuntu是通过qtchooser来选择qt版本号,所以最后需要修改如下文件
+# /usr/share/qtchooser/qt4-x86_64-linux-gnu.conf
+# 比如
+#  /home/wmzhai/qt/4.8.7/bin
+#  /home/wmzhai/qt
+
+
