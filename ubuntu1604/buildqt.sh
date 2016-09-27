@@ -132,5 +132,5 @@ make install
 # 比如
 #  /home/wmzhai/qt/4.8.7/bin
 #  /home/wmzhai/qt
-
+# 然后在/etc/profile里面把bin目录添加到path里面, 否则有时候cmake会找不到qmake
 
