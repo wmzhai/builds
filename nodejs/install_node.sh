@@ -1,5 +1,14 @@
 #!/bin/bash
+
+# Remove the lock
+set +e
+sudo rm /var/lib/dpkg/lock
+sudo rm /var/cache/apt/archives/lock
+sudo dpkg --configure -a
 set -e
+
+sudo apt-get -y install build-essential libssl-dev git curl
+
 NODE_VERSION=4.6.0
 NODE_ARCH=x64
 
