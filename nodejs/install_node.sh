@@ -9,7 +9,7 @@ set -e
 
 sudo apt-get -y install build-essential libssl-dev git curl
 
-NODE_VERSION=4.6.0
+NODE_VERSION=4.6.2
 NODE_ARCH=x64
 
 # check we need to do this or not
